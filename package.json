@@ -1,30 +1,27 @@
 {
   "name": "M4DCore",
-  "version": "1.0.0",
-  "description": "Lanzador Minecraft para M4DCore",
-  "main": "src/app.js",
-  "scripts": {
-    "start": "cross-env-shell NODE_ENV=dev electron .",
-    "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
-    "build": "node build.js --obf=true --build=platform",
-    "icon": "node build.js --icon=https://raw.githubusercontent.com/M4DFFIN/M4DCore_Launcher/refs/heads/main/src/assets/images/icon.png",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/M4DFFIN/M4DCore_Launcher.git"
-  },
-  "author": {
-    "name": "M4DFFIN, M4DCore Inc.",
-    "email": "bastian.lin.blin31@gmail.com",
-    "url": "https://github.com/M4DFFIN"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/M4DFFIN/M4DCore_Launcher/issues"
-  },
-  "homepage": "https://github.com/M4DFFIN/M4DCore_Launcher#readme",
-  "dependencies": {
+    "preductname": "M4DCore",
+    "version": "1.0.0",
+    "description": "Lanzador Minecraft para M4DCore",
+    "main": "src/app.js",
+    "author": {
+        "name": "M4DFFIN, M4DCore Inc.",
+        "email": "bastian.lin.blin31@gmail.com",
+        "url": "https://github.com/M4DFFIN"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
+        "build": "node build.js --obf=true --build=platform",
+        "icon": "node build.js --icon=https://raw.githubusercontent.com/M4DFFIN/M4DCore_Launcher/refs/heads/main/src/assets/images/icon.png"
+    },
+    "license": "ISC",
+    "nodemonConfig": {
+        "ext": "js,html,css",
+        "ignore": "**/test"
+    },
+    "dependencies": {
         "electron-updater": "^6.1.8",
         "minecraft-java-core": "^3.10.4",
         "node-bdd": "^2.0.4",
@@ -40,4 +37,8 @@
         "nodemon": "^3.1.2",
         "png2icons": "^2.0.1"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/M4DFFIN/M4DCore_Launcher.git"
+    }
 }
