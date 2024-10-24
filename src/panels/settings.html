@@ -1,0 +1,153 @@
+<div class="container">
+    <div class="nav-settings">
+        <p>Parámetros</p>
+        <div class="nav-box">
+            <div id="account" class="nav-settings-btn active-settings-BTN">CUENTAS</div>
+            <div id="java" class="nav-settings-btn">JAVA</div>
+            <div id="resolution" class="nav-settings-btn">RESOLUCIÓN</div>
+            <div id="launcher" class="nav-settings-btn">LAUNCHER</div>
+            <div id="save" class="nav-settings-btn">INICIO</div>
+        </div>
+    </div>
+
+    <div id="account-tab" class="container-settings active-container-settings">
+        <div class="titre-tab">Cuentas de jugador</div>
+
+        <div class="accounts-list content-scroll">
+            <div class="account" id="add">
+                <div class="add-profile">
+                    <div class="icon-account-add"></div>
+                </div>
+                <div class="add-text-profile">Añadir una cuenta</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="java-tab" class="container-settings content-scroll">
+        <div class="titre-tab">Configurar la RAM</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                Definición de la RAM asignada a su juego, una cantidad mayor aumentará el rendimiento de su juego.
+                su juego.<br>
+                Tenga en cuenta que debe evitar utilizar demasiada RAM, ya que esto puede causar pérdidas de rendimiento en su
+                sus otras aplicaciones.<br><br>
+                <b>Máxima RAM:</b> Indica la cantidad total de RAM asignada a tu juego. Se recomienda no
+                Se recomienda no superar el 50% de la RAM total de tu PC.
+                <b>-Mínima RAM:</b> Indica la cantidad mínima de RAM asignada para iniciar tu juego. Se
+                recomendable no utilizar más de 4GB para este valor.
+            </div>
+            <div class="settings-elements content-evenly">
+                <div class="memory-slider" min="0.5" max="8" step="0.5">
+                    <div class="slider-touch-left">
+                        <span value="0 Go"></span>
+                    </div>
+                    <div class="slider-touch-right">
+                        <span value="0 Go"></span>
+                    </div>
+                    <div class="slider-line">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="ram-info-block">
+                    <b>Tiene un total de <span id="total-ram">0 Go</span> RAM.</b><br>
+                    <b>Tiene un total de <span id="free-ram">0 Go</span> RAM disponible.</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="titre-tab">Ubicación de Java</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                El lanzador utiliza una versión incrustada de Java.
+                Esta versión está disponible en el directorio:<br><span class=«java-path-txt»></span><br>.
+                Sin embargo, puede especificar su propio ejecutable si su juego requiere una versión más reciente de Java.
+                versión más reciente.
+            </div>
+            <div class="settings-elements content-evenly">
+                <input type="text" class="java-path-input-text" disabled>
+                <input type="file" class="java-path-input-file" accept="application/octet-stream" />
+                <div class="java-path-box">
+                    <div class="java-path-set java-path-btn">Cambiar</div>
+                    <div class="java-path-reset java-path-btn">Por defecto</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resolution-tab" class="container-settings">
+        <div class="titre-tab">Ajustes de resolución de Minecraft</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                Establece una resolución personalizada para que el juego se adapte a tu pantalla.
+                Por defecto, el juego comienza en 854 X 480,<br>puedes cambiar este valor para una comodidad de juego óptima.
+                comodidad. <br>La resolución ideal es 1280 x 720.
+            </div>
+            <div class="settings-elements content-center">
+                <div class="input-size-element">
+                    <input type="number" class="width-size input-resolution">
+                    <div class="size-cross"></div>
+                    <input type="number" class="height-size input-resolution">
+                </div>
+                <div class="size-reset size-btn">Por defecto</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="launcher-tab" class="container-settings content-scroll">
+        <div class="titre-tab">Parámetros de descarga</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                Este parámetro determina el número máximo de ficheros que pueden descargarse simultáneamente al actualizar o descargar recursos.
+                actualización o descarga de recursos.<br><br>
+                Tenga en cuenta que la modificación de este parámetro puede afectar a la descarga
+                rendimiento.<br>
+                Se recomienda que no exceda los límites recomendados por defecto,<br>
+                a menos que esté experimentando problemas específicos de conectividad.
+            </div>
+            <div class="settings-elements content-center">
+                <input type="number" class="max-files input-max-files">
+                <p>Archivos</p>
+                <div class="max-files-reset max-files-btn">Por defecto</div>
+            </div>
+        </div>
+
+        <div class="titre-tab">Tema claro y oscuro</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                Elige entre los temas claro y oscuro para personalizar la apariencia del lanzador.<br><br>
+                Cambiar el tema puede afectar a la legibilidad y la experiencia visual.<br>
+                Selecciona el que mejor se adapte a tus preferencias.
+            </div>
+            <div class="settings-elements content-center theme-box">
+                <div class="theme-btn theme-btn-clair">Light</div>
+                <div class="theme-btn theme-btn-sombre">Dark</div>
+                <div class="theme-btn theme-btn-auto">Automático</div>
+            </div>
+        </div>
+
+        <div class="titre-tab">Comportamiento del lanzador al inicio</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                Puedes elegir si el iniciador se cierra automáticamente o permanece abierto cuando inicias el juego.
+            </div>
+
+            <div class="settings-elements content-evenly close-box">
+                <div class="close-launcher close-btn">Cierra el lanzador después de iniciar el juego.</div>
+                <div class="close-none close-btn">Mantenga el lanzador abierto</div>
+                <div class="close-all close-btn">Cierra el juego si el lanzador está cerrado.</div>
+            </div>
+        </div>
+
+        <!-- <div class="titre-tab">Entorno INTEL</div>
+        <div class="settings-elements-box">
+            <div class="setting-text">
+                para jugarlos con los fiscales de Apple Silicon
+            </div>
+
+            <div class="settings-elements content-evenly close-box">
+                <div class="close-launcher close-btn">Environnement INTEL</div>
+                <div class="close-none close-btn">Environnement SILICON</div>
+            </div>
+        </div> -->
+    </div>
+</div>
