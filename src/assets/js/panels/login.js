@@ -1,5 +1,5 @@
 /**
- * @author M4DFFIN
+ * @author Luuxis
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 const { AZauth, Mojang } = require('minecraft-java-core');
@@ -28,7 +28,7 @@ class Login {
     }
 
     async getMicrosoft() {
-        console.log('Iniciando la cuenta de Microsoft...');
+        console.log('Initializing Microsoft login...');
         let popupLogin = new popup();
         let loginHome = document.querySelector('.login-home');
         let microsoftBtn = document.querySelector('.connect-home');
@@ -36,8 +36,8 @@ class Login {
 
         microsoftBtn.addEventListener("click", () => {
             popupLogin.openPopup({
-                title: 'Conectarse',
-                content: 'Espere por favor...',
+                title: 'Connexion',
+                content: 'Veuillez patienter...',
                 color: 'var(--color)'
             });
 
@@ -52,7 +52,7 @@ class Login {
 
             }).catch(err => {
                 popupLogin.openPopup({
-                    title: 'Error',
+                    title: 'Erreur',
                     content: err,
                     options: true
                 });
@@ -61,7 +61,7 @@ class Login {
     }
 
     async getCrack() {
-        console.log('Iniciando la cuenta sin conexión...');
+        console.log('Initializing offline login...');
         let popupLogin = new popup();
         let loginOffline = document.querySelector('.login-offline');
 
@@ -72,8 +72,8 @@ class Login {
         connectOffline.addEventListener('click', async () => {
             if (emailOffline.value.length < 3) {
                 popupLogin.openPopup({
-                    title: 'Error',
-                    content: 'Su apodo debe tener al menos 3 caracteres.',
+                    title: 'Erreur',
+                    content: 'Votre pseudo doit faire au moins 3 caractères.',
                     options: true
                 });
                 return;
@@ -81,8 +81,8 @@ class Login {
 
             if (emailOffline.value.match(/ /g)) {
                 popupLogin.openPopup({
-                    title: 'Error',
-                    content: 'Tu apodo no debe contener espacios.',
+                    title: 'Erreur',
+                    content: 'Votre pseudo ne doit pas contenir d\'espaces.',
                     options: true
                 });
                 return;
@@ -92,7 +92,7 @@ class Login {
 
             if (MojangConnect.error) {
                 popupLogin.openPopup({
-                    title: 'Error',
+                    title: 'Erreur',
                     content: MojangConnect.message,
                     options: true
                 });
@@ -104,7 +104,7 @@ class Login {
     }
 
     async getAZauth() {
-        console.log('Iniciando el inicio de sesión AZauth...');
+        console.log('Initializing AZauth login...');
         let AZauthClient = new AZauth(this.config.online);
         let PopupLogin = new popup();
         let loginAZauth = document.querySelector('.login-AZauth');
@@ -121,15 +121,15 @@ class Login {
 
         AZauthConnectBTN.addEventListener('click', async () => {
             PopupLogin.openPopup({
-                title: 'Conexión en progreso...',
-                content: 'Espere por favor...',
+                title: 'Connexion en cours...',
+                content: 'Veuillez patienter...',
                 color: 'var(--color)'
             });
 
             if (AZauthEmail.value == '' || AZauthPassword.value == '') {
                 PopupLogin.openPopup({
-                    title: 'Error',
-                    content: 'Por favor complete todos los campos.',
+                    title: 'Erreur',
+                    content: 'Veuillez remplir tous les champs.',
                     options: true
                 });
                 return;
@@ -139,7 +139,7 @@ class Login {
 
             if (AZauthConnect.error) {
                 PopupLogin.openPopup({
-                    title: 'Error',
+                    title: 'Erreur',
                     content: AZauthConnect.message,
                     options: true
                 });
@@ -156,15 +156,15 @@ class Login {
 
                 connectAZauthA2F.addEventListener('click', async () => {
                     PopupLogin.openPopup({
-                        title: 'Conexión en progreso...',
-                        content: 'Espere por favor...',
+                        title: 'Connexion en cours...',
+                        content: 'Veuillez patienter...',
                         color: 'var(--color)'
                     });
 
                     if (AZauthA2F.value == '') {
                         PopupLogin.openPopup({
-                            title: 'Error',
-                            content: 'Por favor ingrese el código A2F.',
+                            title: 'Erreur',
+                            content: 'Veuillez entrer le code A2F.',
                             options: true
                         });
                         return;
@@ -174,7 +174,7 @@ class Login {
 
                     if (AZauthConnect.error) {
                         PopupLogin.openPopup({
-                            title: 'Error',
+                            title: 'Erreur',
                             content: AZauthConnect.message,
                             options: true
                         });

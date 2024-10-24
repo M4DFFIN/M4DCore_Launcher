@@ -1,5 +1,5 @@
 /**
- * @author M4DFFIN
+ * @author Luuxis
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 // import panel
@@ -18,7 +18,7 @@ const fs = require('fs');
 class Launcher {
     async init() {
         this.initLog();
-        console.log('Iniciando el Launcher...');
+        console.log('Initializing Launcher...');
         this.shortcut()
         await setBackground()
         if (process.platform == 'win32') this.initFrame();

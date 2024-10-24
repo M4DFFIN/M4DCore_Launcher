@@ -1,5 +1,5 @@
 /**
- * @author M4DFFIN
+ * @author Luuxis
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -16,7 +16,7 @@ class Config {
         return new Promise((resolve, reject) => {
             nodeFetch(config).then(async config => {
                 if (config.status === 200) return resolve(config.json());
-                else return reject({ error: { code: config.statusText, message: 'Servidor no accesible' } });
+                else return reject({ error: { code: config.statusText, message: 'server not accessible' } });
             }).catch(error => {
                 return reject({ error });
             })
@@ -59,14 +59,14 @@ class Config {
                         }
                         return resolve(news);
                     }
-                    else return reject({ error: { code: config.statusText, message: 'Servidor no accesible' } });
+                    else return reject({ error: { code: config.statusText, message: 'server not accessible' } });
                 }).catch(error => reject({ error }))
             })
         } else {
             return new Promise((resolve, reject) => {
                 nodeFetch(news).then(async config => {
                     if (config.status === 200) return resolve(config.json());
-                    else return reject({ error: { code: config.statusText, message: 'Servidor no accesible' } });
+                    else return reject({ error: { code: config.statusText, message: 'server not accessible' } });
                 }).catch(error => {
                     return reject({ error });
                 })

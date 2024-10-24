@@ -1,5 +1,5 @@
 /**
- * @author M4DFFIN
+ * @author Luuxis
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -23,7 +23,7 @@ function destroyWindow() {
 function createWindow() {
     destroyWindow();
     updateWindow = new BrowserWindow({
-        title: "Actualizar",
+        title: "Mise à jour",
         width: 400,
         height: 500,
         resizable: false,
