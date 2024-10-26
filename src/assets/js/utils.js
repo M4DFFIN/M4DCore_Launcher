@@ -1,12 +1,7 @@
-/**
- * @author M4DFFIN
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
- */
-
 const { ipcRenderer } = require('electron')
 const { Status } = require('minecraft-java-core')
 const fs = require('fs');
-const pkg = require('../package.json');
+const pkg = require('../../../package.json');
 
 import config from './utils/config.js';
 import database from './utils/database.js';

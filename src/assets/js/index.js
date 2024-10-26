@@ -1,10 +1,5 @@
-/**
- * @author M4DFFIN
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
- */
-
 const { ipcRenderer, shell } = require('electron');
-const pkg = require('../package.json');
+const pkg = require('../../../package.json');
 const os = require('os');
 import { config, database } from './utils.js';
 const nodeFetch = require("node-fetch");

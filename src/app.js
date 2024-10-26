@@ -1,8 +1,3 @@
-/**
- * @author M4DFFIN
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
- */
-
 const { app, ipcMain, nativeTheme } = require('electron');
 const { Microsoft } = require('minecraft-java-core');
 const { autoUpdater } = require('electron-updater')
@@ -47,7 +42,7 @@ ipcMain.on('update-window-progress-reset', () => UpdateWindow.getWindow().setPro
 ipcMain.on('update-window-progress-load', () => UpdateWindow.getWindow().setProgressBar(2))
 
 ipcMain.handle('path-user-data', () => app.getPath('userData'))
-ipcMain.handle('appData', e => app.getPath('appData'))
+ipcMain.handle('appData', () => app.getPath('appData'))
 
 ipcMain.on('main-window-maximize', () => {
     if (MainWindow.getWindow().isMaximized()) {
