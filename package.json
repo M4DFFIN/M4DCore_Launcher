@@ -1,6 +1,6 @@
 {
-    "name": "M4DCore-Launcher",
-    "preductname": "M4DCore Launcher",
+    "name": "MADCore-Launcher",
+    "preductname": "MADCore Launcher",
     "version": "1.0.1",
     "description": "Lanzador Minecraft que sera ocupado para instancias de servidores",
     "main": "src/app.js",
