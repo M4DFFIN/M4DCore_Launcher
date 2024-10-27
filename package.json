@@ -9,7 +9,6 @@
         "url": "https://github.com/M4DFFIN"
     },
     "scripts": {
-        
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
         "build": "node build.js --obf=true --build=platform",
@@ -22,6 +21,7 @@
     },
     "dependencies": {
         "electron-updater": "^6.1.8",
+        "force": "^0.0.3",
         "minecraft-java-core": "^3.10.4",
         "node-bdd": "^2.0.4",
         "node-fetch": "^2.7.0",
